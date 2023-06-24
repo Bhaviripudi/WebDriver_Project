@@ -1,0 +1,21 @@
+Database Testing:
+-----------------
+Will test the data is inserted/updated/deleted or not.
+SQL -> Structured Query Language
+*DDL(Data Defnition Language) -> create, alter, drop
+*DML(Data Manipulation Language) -> select, insert, update, delete
+*TCL(Transaction Control Language) -> commit, rollback
+*DCL(Data Control Language) -> grant, revoke
+
+As a functional tester we require insert, update, delete, select
+
+JDBC(Java Database Connectivity):
+---------------------------------
+Download data base drivers and associate to our project
+
+Steps to connect db and execute queries through java:
+------------------------------------------------------
+1.Establish a connection
+2.Create a statement
+3.Execute statement
+4.close connection

@@ -1,0 +1,377 @@
+WebdRiver
+-----------
+Webdriver is an interface or Api or framework
+
+API -> Application Programming Interface
+Java API -> contains packages, classes, methods
+WebDriver API -> which contains packages, classes, methods (for browser automation)
+
+Interface WebDriver
+{
+m1();
+m2();
+}
+
+They have implemented classes for every browser :
+
+class FireFoxDriver implements WebDriver
+{
+m1();
+m2();
+}
+
+class InternetExplorerDriver implements WebDriver
+{
+}
+
+class ChromeDriver implements WebDriver
+{
+}
+
+Creating WebDriver project in Eclipse:
+---------------------------------------
+1.Create java project
+2.Download webdriver(4.9.1 current version) jar files - https://www.selenium.dev/downloads/
+3.Right clk on project -> properties -> library-> add external jars->and also files from bin
+
+Test a text box:
+----------------
+1.Property/Address(object address)
+2.Method(catch object)
+
+findElement() -> Is a method,Used for finding the element on page
+By.name("") -> Is a property, will provide address of element
+sendKeys() -> used for enter some text
+close() -> close the browser
+driver.manage().windwo().maximize() -> maximize window
+
+FireBug -> An add-on for firefox browser displaying html script and highlighting the elements.
+FirePath -> Generate Xpath automatically.
+
+Headless Browser in selenium webdriver
+--------------------------------------
+-> Is a browser simulation program that does not have a user interface.
+-> These browsers will operates like other browsers, but do not display any UI. Selenium executes its tests in the background.
+-> Some of the headless browsers are  chrome,firefox,HTMLUnit driver(By-default UI less browser), PhantomJS
+
+Headless Testing:
+-----------------
+-> Executing web applications, UI tests without opening a browser's interface is called...
+   Headless browser acts similar to a normal web browser.
+-> Testers have full control over the web pages loaded into headless browsers, only diff is 
+   u cannot see user interface.
+
+When to use Headless browser testing ?
+---------------------------------------
+-> Once the cross browser testing done, want to run regression test cases in subsequent 
+   releases and continuous integration.
+-> When ur machine does not haave a GUI, for instance if u waant to run ur test cases in unix.
+-> When tests are executed parallely as User Interface based browsers consumes a lot of Mem/resources.
+
+Advantages of Headless:
+------------------------
+Compare to the UI based browsers it is faster.
+
+Disadvantages:
+--------------
+No user uses ur application without UI, it may not report errors related with images.
+Difficult to find bugs in application 
+managing to take screenshot is very difficult.
+Debugging is very difficult.
+
+WebDriver Commands:
+-------------------
+Browser commands :
+   -> close() - close the current window
+   -> quit()  - close all the browsers
+
+Get commands :
+   -> get() - open URL
+   -> getTitle() - returns title of page
+   -> getPageSource() - 
+   -> getCurrentUrl() - return current URL
+   -> getText() - returns text of particular element
+
+Conditional commands :
+   -> isDisplayed()
+   -> isEnabled()
+   -> isSelectec()
+
+Navigation commands :
+   -> navigate().forward()
+   -> navigate().back()
+   -> navigate().to()
+   -> navigate().refresh()
+
+Wait commands :
+   -> Implicitwait
+   -> Explicitwait
+
+Switch commands :
+   -> switchTo().frame() - switch between frames/iframes
+   -> switchTo().alert()
+   -> switchTo().defaultContent()
+   -> switchTo().window()
+   -> Driver.getWindowHandles()
+
+Locators
+---------
+->Used to identify elements in the web page.
+HTML(HyperTextMarkupLanguage)/DHTML(Dynamic)/XML(Extensioble) -> Client side scripting languages
+
+1.ID
+2.Name
+  ->textboxes/inputboxes - input
+3.Link Text - driver.findElement(By.linkText("")).click();
+  ->links- a
+4.CSS Selector 
+---------------
+- Cascading Style Sheets - is a methodoligy where it defines how the elements are aligned.
+   ->Tag and ID - driver.findElement(By.cssSelector("input#id")).sendKeys("sulu@");
+   ->Tag and Class - driver.findElement(By.cssSelector("input.class")).sendKeys("");
+   ->Tag and Attribute - driver.findElement(By.cssSelector("input[name=value]")).sendKeys("");
+   ->Tag, class and attribute - driver.findElement(By.cssSelector("input.class[attribute=value]")).sendKeys("");
+   ->Inner Text - driver.findElement(By.cssSelector("font:contains("password:")"))
+5.XPath
+-------
+Types : 1) Absolute x-path(Complete x-path) -> complete/full address of element in the web page
+                                            -> It always have(starts with) single '/'
+        2) Relative x-path(Partial x-path) -> partial address of element in the web page
+                                           -> It always have(starts with) double '//'
+Limitatiion in absolute x-path is, if developed changed any element or removed they that x-path wont work.
+                                   so we should always go with relative x-path
+Writing x-path manually:
+-----------------------
+Absolute x-path : /html/body/div/div/div/div/div/div[2]/div[2]/form/div/div/div[2]/input
+
+Relative x-path :
+ ->With the x-path methods, we can handle elements whose properties are dynamically changing.
+                 //tagname[@attribute='value'] (or)
+                 //*[@type='value' OR @name='value'] - if any one attribute matched
+                 //*[@attribute='value' AND @attribute='value'] - if both should be matched
+                 //tagname[@attribute1='value'][@attribute2='value'] - multiple attributes
+                 //tagname[contains(@attribute,'value')] - cotains() method
+                    ex: //input[contains(@id,email)] - matches gmail,email123, emailbcd
+                 //tagname[starts-with(@attribute,'value')] -strats-with() method
+
+Ex : <input class="input_error form_input" placeholder="Username" type="text" data-test="username" id="user-name" name="user-name" autocorrect="off" autocapitalize="none" value="">
+    //input[@placeholder='Username']
+
+Selenium IDE :
+---------------
+->Component of Selenium suite(record and playback tool) 
+->Plugin for firefox browser
+->We can use IDE for simple test cases not suitable for complex kind of test cases.
+
+Data Driven Tests:
+-------------------
+Reading data from excel sheet.
+Selenium will not support excel sheets, for that we need to use some third party tools.
+Download apache poi : https://archive.apache.org/dist/poi/release/bin/poi-bin-5.2.3-20220909.zip
+add all the jar files.
+Excel->work books->sheets->rows->cells
+
+FileInputStream -> This class is used for read a file
+FileOutputStream -> This class is used for write a file 
+XSSFWorkbook -> Read workbook
+XSSFSheet -> Read sheet
+XSSFRow -> Read row
+XSSFCell -> Read cell
+
+getStringCellValue() - will get string type data from excel
+getNumericCellValue() - will get number type data from cell
+getBooleanCellValue() - will get boolean type data from cell.
+
+sendKeys(String.valueOf()) - used for sending numeric values
+
+Data Type conversions :
+-----------------------
+String to Integer = Integer.parseInt()
+String to double = Double.parseDouble()
+
+Handling Web Table/HTML Table :
+-------------------------------
+WebElements are :
+-------------
+textbox/inputbox
+button
+link
+radio button
+check boxes -> same like button , will find element and clk
+dropdown/listbox/combobox
+frame
+web table
+calender
+file upload
+drag and drop
+
+Dropdown options:
+-----------------
+Useing Select class we can capture the dropdown element
+Using getOption() we can capture all options of dropdown.
+
+WebDriver Handling Browser windows:
+-----------------------------------
+getWindowHandles() -> It will get each window's IDs/Keys
+Set -> It will store mult values
+
+Switch between frames/iframes:
+------------------------------
+driver.switchTo().frame(frame name)
+driver.switchTo().frame(driver.findElement(By.xpath("")));
+
+Switch betweeen alerts:
+-----------------------
+driver.switchTo().alert();
+driver.switchTo().alert().accept(); //OK
+driver.switchTo().alert().dismiss(); //Cancel
+driver.switchTo().alert().getText(); //Returs text on alert box
+driver.switchTo().alert().sendKeys(); //Enter something into alert
+
+Actions class:
+--------------
+-> Handling special mouse events are done using advanced user interactions API
+-> It contains the Actions and the Action class that are needed when executing these events.
+
+clickAndHold() - clicks(without releasing)
+contextClick() - Performs a context(right clk) at the current mouse location
+doubleClick() - performs double clk
+dragAndDrop(source,target) - clk and hold at source and release at target ->not a method
+dragAndDropBy(source, x-offset,y-offset) - clk and hold at source and moves by a given offset and release
+             x-offset: horizontal move offset
+             y-offset: vertical move offset
+moveToElement(toElement).build().perform() - moves mouse to the middle of the element(toElement) -- mouse over
+release()  - release the de-pressed left mouse button at the current mouse location
+
+How to find broken links:
+-------------------------
+A broken link or dead link is a ink on a web page that no longer works becoz of below pblms:
+1.An improper URL entered for the link by the website owner
+2.The destination website removed the linked web page(causing 404 error)
+3.The dest website permanently moved or no longer exists
+
+By.tagname("a").size() -> we can get links
+.getAttribute("href")  -> we can get urls of those links
+URL link = new URL();
+HttpURLConnection connect = link.openConnection() -> open a connection by using 'link'
+connect.connect();
+connect.responseCode();
+
+Download a file using web driver(blocking popup):
+--------------------------------------------------
+FirefoxProfile profile = new FirefoxProfile(); //creating the browser profile
+profile.setPreference("browser.helperApps.neverAsk.saveToDesk", "text/plain"); //set MIME type of particular file
+profile.setPreference("browser.download.manager.showWhenStarting.", false); //setting the preference to block the save file popup
+		
+FirefoxOptions options = new FirefoxOptions(); //setting options in browser profile
+options.setProfile(profile);
+WebDriver driver = new FirefoxDriver(options);
+
+Upload and download files using sikuli tool:
+-------------------------------------------
+Download sikuli jar files
+Add jar files to project
+write script for upload file in webdriver
+
+Handling cookies in WebDriver:
+------------------------------
+Cookies :
+--------
+->While browsing diff kind of sites in diff browsers, internally the browser will hold few values 
+  those are called as Cookies. Based on the cookies browser will hold the information without even login rqrd.
+Commands for cookies :
+---------------------
+driver.manage().getCookies() -> Returns the list of all cookies
+.getName() and .getValue()
+driver.manage().getCookieNamed(arg0) -> Returns the specific cookie by name
+driver.manage().addCookie(arg0) -> Create or add cookie
+driver.manage().deleteCookie(arg0) -> Delete specific cookie
+driver.manage().deleteCookieNamed(arg0) -> Delete cookie by name
+driver.manage().deleteAllCookies() -> Delete all cookies
+
+Scrolling web pages :
+---------------------
+Scenario 1: To scroll down the web page by pixel
+         2: By the visibility of an element
+         3: By the bottom of the page
+
+->To scroll using Selenium, we can use JavaScriptExecutor interface that helps to
+  execute java script methods using sselenium webdriver.
+ JavascriptExecutor js = (JavascriptExecutor) driver;
+ //scrollling by the pixel
+js.executeScript("window.scrollBy(0,1000)", "");
+		    
+//scrolling by element
+ WebElement india = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[2]/table[1]/tbody/tr[86]/td[1]/img"));
+ js.executeScript("arguments[0].scrollIntoView()", india);
+		    
+ //scroll till bottom
+js.executeScript("window.scrollTo(0,document.body.scrollHeight)"); 
+
+Robot Class:
+------------
+->In certain selenium automation tests, there is a need to control keyboard or mouse
+  to interact with OS windows like Download popup, Alert, Print Pop-ups, etc
+->Selenium Webdriver cannot handle these OS pop-ups/applications.
+
+Adv:
+----
+->Robot class can simulate keyboard and mouse events
+->Robot class can help in upload/download of files when using selenium web driver
+->Robot class can easily be integrated with current automation framework(keyword, data-driven or hybrid)
+
+common use cases:
+-----------------
+1.robot.keyPress(keyEvent.VK_DOWN) -> Press down arrow key in keyboard
+2.robot.keyPress(keyEvent.VK_TAB) -> Press Tab
+3.robot.keyPress(keyEvent.VK_ENTER) -> Press enter
+
+JavaScriptExecutor :
+--------------------
+Is an interface which provides mechanism to execute java script throgh selenium.
+
+Actions we can perform using JavaScriptExecutor:
+------------------------------------------------
+->Flashing an element
+->Drawing a boarder around the element
+->Capture title of the page
+->Click on some element
+->Generate alert info
+->Refreshing page
+->Scrolling page
+
+Ashot API:
+----------
+Take screenshots of logo
+Using Ashot tool we compare images.
+
+ZXing API :
+-----------
+Selinium has a limitation that cannot automate Bar codes.
+Using ZXing third party automation tool we can automate bar codes and qr codes.
+
+String barcodeUrl/qrcodeUrl = driver.findElement(By.xpath("//*[@id=\"infoTarget\"]/div[1]/img")).getAttribute("src");		
+URL url = new URL(barcodeUrl);
+BufferedImage bufferedImage = ImageIO.read(url);
+LuminanceSource luminanceSource = new BufferedImageLuminanceSource(bufferedImage);
+BinaryBitmap binaryBitMap = new BinaryBitmap(new HybridBinarizer(luminanceSource));
+Result result = new MultiFormatReader().decode(binaryBitMap);
+System.out.println(result.getText());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

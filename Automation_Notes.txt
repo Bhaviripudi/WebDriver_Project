@@ -1,0 +1,77 @@
+Automation Testing 
+-------------------
+->Selenium is a suite, set of components/tools
+->Testing an application by using an automation tool
+                 or
+  Converting test cases to automation scripts
+
+->Selenium also comes under functional testing.
+->Selenium is funtional and regression testing tool.
+
+Selenium suite:
+----------------
+->Selenium IDE : plug-in for firefox browser, record and playback tool
+->Rc(Remote Control) : Is a server will interact with browser and execute automating test cases(indirect).  
+->Webdriver : Is an API which will automate test cases
+->Selenium Grid : Can execute test cases remotely.
+
+Selenium 1 : IDE, RC, Grid
+Selenium 2 : IDE,WebDriver, Grid
+Selenium 3 : WebDriver, Grid
+
+Advantages:
+------------
+->Open source
+->It can supports mult labguages(Java,python,c#,Ruby...etc)
+->It can also supports mult operating systems
+->It also supports mult browsers(Cross Browser Testing)
+->Supports parallel testing
+->It can integrate third party tools(TestNG, Cucumber, Maven, Jenkins, Git & Git hub)
+
+Disadvantages/Limitations:
+--------------------------
+->It does not support desktop applications, only for web based applications. -> AutoIt,Sikuli
+->Dont have any dedicated support -> Online forums available
+->No reporting facility -> TestNg, Extents
+->Images,Graphs,captcha not supported -> Can test certain levels
+->Cannnot support working with excel sheets -. Apache poi
+
+Tools:
+------
+QTP/UFT
+Selenium
+
+Performance tools:
+------------------
+Jmeter
+Loadrunner
+
+Test Management tools:
+------------------------
+Quality Center, Ms VSTP , Jira
+Test cases
+Defect reporting
+Execute status
+Report generation
+
+Defect Reporting tools:
+-----------------------
+Bugjilla
+Remedy
+Devrack
+
+Jira -> Test management, defect management, Dashboards
+
+when do we take automation:
+---------------------------
+-> Choose some of the manual test cases(Retest and Regression)
+-> Application should be stable
+
+Functional Testing in automation:
+---------------------------------
+Object properties(Radio button, dropdown,links)
+Input domain testing(Text boxes)
+Data base testing
+Error handling(will check whether appl showing error msgs or not)
+Links
+

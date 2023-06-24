@@ -1,0 +1,87 @@
+Selenium Grid:
+--------------
+Grid is a component of selenium used for executing test cases remotely.
+It will follow:
+Hub(Master) -> Local system(single)
+Node(Slave)  -> VMs(Mult) 
+
+Pre-requisites:
+----------------
+1.We should have all browsers & browser drivers in local and remote machines.
+2.We need to make local machine as hub server and VMs as a nodes(register vth hub).
+ Download senlenium grid jar in both hub and nodes.
+3.Write test case and then execute remote systems.
+
+windows(Hub) ---------> windows(chrome)
+windows(Hub) ---------> linux(firefox)
+
+Steps:
+------
+->In cmd where jar located execute this command as a hub
+  java -jar selenium-server-4.10.0.jar -role hub
+->Nodes should register to http://192.168.55.104/grid/register/
+  Clients should connect to http://192.168.55.104/wd/hub
+->Check hu is running or not
+  http://localhost:4444/grid/console
+->Register node command in remote machine
+ java -Dwebdriver.chrome.driver="D:\\chromedriver.exe" -jar selenium-server-4.10.0.jar -role node -hub http://192.168.55.104/grid/register/
+
+Git and Git Hub:
+----------------
+Configuration management process: 
+Test plan , test cases etc will be shared across team- config management process.
+Git-> Configuration management tool, called as local repository.
+Git Hub ->  Is website , where we can maintain all our data or files, called as remote repository.
+
+GitHub account -> Account
+create repository 
+Git hub account -> Username - Bhaviripudi, Password : Git@sulu98
+remote repo link - https://github.com/Bhaviripudi/AutomationS3.git
+
+Git installation -> https://git-scm.com/download/win/
+
+Git commands:
+------------
+git init -> Initializing local repo
+git remote add origin "remote repo link" -> will integrate local repo to remote repo
+git pull origin master -> pull files from remote repo
+git add <file> -> single file
+git add -a   -> mult files 
+Begore commiting need to execute 2 user commands for the first time
+git config --global user.name "Bhaviripudi"
+git config --global user.email sulochanabhav@gmail.com
+
+git commit -> single file
+git commit -a -m "commiting"    -> mult files  into local repo
+git log
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+

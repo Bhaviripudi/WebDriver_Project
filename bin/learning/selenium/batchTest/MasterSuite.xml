@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MasterTestSuite">
+ 
+ 
+ <suite-files>
+ <suite-file path ="C:\Users\bhsul\Java_Automation_workspace\WebDriver_Project\src\learning\selenium\batchTest\SanitySuite.xml"/>
+ <suite-file path ="C:\Users\bhsul\Java_Automation_workspace\WebDriver_Project\src\learning\selenium\batchTest\FnlSuite.xml"/>
+ </suite-files>
+ 
+ 
+</suite>

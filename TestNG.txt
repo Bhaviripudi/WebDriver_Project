@@ -1,0 +1,147 @@
+TestNG(Testing framework for next generation):
+----------------------------------------------
+Advanced framework of junit
+Is a framework specifically designed for java programmers
+This can be used for unit testing, integration, functional and end to end testing
+Can be used for parallel testing
+
+TestNG Assertions:
+-------------------
+Asserts helps us to verify the condition of the test and decide whether test has failed or passed.
+A test is considered successful only if it is completed without throwing any exception.
+
+Types of assertions:
+---------------------
+1.Hard assertion -> If particular test has failed it will not proceed to next statements
+   commands : Assert.assertTrue()
+              Assert.assertFalse()
+              Assert.assertEquals()
+2.Soft assertion -> Even if one test has failed it will proceed to next statements
+   commands : SoftAssert softAssert = new SoftAssert();
+              softAssert.assertTrue(condition);
+              softAssert.assertAll();
+Annotations:
+------------
+Is a form of meta data that can be added to java source code
+1.@Test
+2.@Beforesuite
+3.@Aftersuite
+4.@BeforeClass
+5.@AfterClass
+6.@BeforeMethod
+7.@AfterMethod
+8.@BeforeTest
+9.@AfterTest
+10.@BeforeGroup
+11.@AfterGroup
+
+12.@DataProviders
+13.@Parameters
+14.@Factory
+15.@Listeners
+16.@Ignore
+
+Batch Testing:
+--------------
+Executing mult testcases as a suite
+XML file used for batch
+
+How to show reports:
+------------------
+At run time it will create xml file, because testng wont work without xml file. (If we did not create)
+test-output -> rt clk on index.html -> open with system editor -> info : get a path of xml
+
+Structure of testng xml file:
+-----------------------------
+<suite name ="">
+      <test name = "">
+            <classes>
+                     <class name = ""/>
+            </classes>
+      </test>
+</suite>
+
+Prioritization:
+---------------
+By default testng willl follow by the ASCII characters and execute based in that, to overcome that we will use priority
+@Test(priority=1)
+
+How to skip the test case from suite:
+-------------------------------------
+class level/method level/test level
+<class name ="" enabled="false">   //class level
+</test>
+
+<methods>
+       <include name = ""/>         //method level in xml
+        <exclude name = ""/>
+</methods>
+           (or)
+@Test(enabled=false)
+void testmethod(){   //method level
+}
+
+Parallel Testing :
+-------------------
+If we want to run all tests parallely in test level then we can put parallel and thread count in suite level.
+<suite name = "" parallel="tests" thread-count = "2">
+</suite>
+
+If we want to run all classes parallely in class level then we can put parallel and thread count in test level level.
+<test name = "" parallel="classes" thread-count = "2">
+</test>
+
+Same aplies for methods as well....
+
+TestNG Listeners:
+-----------------
+If we want to do any additional opeartions apart from pass or fail then will use listener class
+
+When ever methods are passed/failed from test classes automatically the methods in listener class willl be executed
+
+onTestStart()
+onTestSuccess()
+onTestFailure()
+onTestSkipped()
+
+TestNG Extent-Resports:
+-----------------------
+Normal testng reports will also give reports but entent reports will give the graphical representation.
+
+Go to maven repository and type 
+extent reports - download jar files and to ur project
+extent reports selenium - download jar files and add all jar files except extentreport jar file
+
+Add extent-config.xml file as well.(available in net)
+
+POM(Page Object Model):
+------------------------
+Maintaining/Managing/Organizing all the page elements ina diff file.
+We have devided into two classes:
+Identification -> pom (will identify the elements)
+Operation - java class (will call pom and do operations)
+
+why to use -> It will be useful to maintain all the elements in one class for complex projects.
+           -> If something has changed no need to search and change the element, that time we can directly go for pom.
+
+log4j:
+-------
+By the logs we can easily identify the root cause of bug
+
+Download apache log4j jar file and add it if it did not come with apache jar files
+log4j.xml or log4j.properties fille
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
