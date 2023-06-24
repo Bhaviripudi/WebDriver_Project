@@ -62,8 +62,7 @@ Git with eclipse:
 ->Open Git perspective
 ->Click on existing repository and select folder which u want to commmit changes, If u alrdy have remote repository.
 ->Clk on create or clone repository to to add the folder. And give remote url
-->Rt clk on ur prjct -> team -> share
-
+->Rt clk on ur prjct -> team -> share -> select repository (frst time)/ select commit.
 
 Continuous Integration:
 -----------------------
