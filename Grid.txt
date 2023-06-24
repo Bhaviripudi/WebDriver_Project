@@ -30,6 +30,8 @@ Git and Git Hub:
 ----------------
 Configuration management process: 
 Test plan , test cases etc will be shared across team- config management process.
+Configuration management tools:
+-------------------------------
 Git-> Configuration management tool, called as local repository.
 Git Hub ->  Is website , where we can maintain all our data or files, called as remote repository.
 
@@ -55,7 +57,21 @@ git commit -> single file
 git commit -a -m "commiting"    -> mult files  into local repo
 git log
 
+Git with eclipse:
+-----------------
+->Open Git perspective
+->Click on existing repository and select folder which u want to commmit changes, If u alrdy have remote repository.
+->Clk on create or clone repository to to add the folder. And give remote url
+->Rt clk on ur prjct -> team -> share
 
+
+Continuous Integration:
+-----------------------
+->Once the code is pushed to the git repo, the devops team will integrate and create build and run the build.Once the build is successful, 
+  inform to the developers/automation testers
+  Tools-> Jenkins, Maven ,Ant etc
+  
+  
 
 
 
