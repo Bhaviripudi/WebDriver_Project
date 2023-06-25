@@ -134,6 +134,8 @@ HTML(HyperTextMarkupLanguage)/DHTML(Dynamic)/XML(Extensioble) -> Client side scr
    ->Inner Text - driver.findElement(By.cssSelector("font:contains("password:")"))
 5.XPath
 -------
+It is defined as an XML path
+Used to identify an element on web page using HTML 
 Types : 1) Absolute x-path(Complete x-path) -> complete/full address of element in the web page
                                             -> It always have(starts with) single '/'
         2) Relative x-path(Partial x-path) -> partial address of element in the web page
