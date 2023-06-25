@@ -358,6 +358,11 @@ BinaryBitmap binaryBitMap = new BinaryBitmap(new HybridBinarizer(luminanceSource
 Result result = new MultiFormatReader().decode(binaryBitMap);
 System.out.println(result.getText());
 
+How to handle stale element exception:
+--------------------------------------
+Stale -> means old, decayed or no longer fresh
+StaleElementReferenceException -> When we are trying to interact with an element which is staled, then will get this exception.
+When this happens,we will need to refresh the reference or find the element again.
 
 
 
