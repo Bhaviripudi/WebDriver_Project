@@ -95,7 +95,7 @@ Get commands :
 Conditional commands :
    -> isDisplayed()
    -> isEnabled()
-   -> isSelectec()
+   -> isSelected()
 
 Navigation commands :
    -> navigate().forward()
