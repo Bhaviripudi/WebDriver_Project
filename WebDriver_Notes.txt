@@ -135,12 +135,14 @@ HTML(HyperTextMarkupLanguage)/DHTML(Dynamic)/XML(Extensioble) -> Client side scr
 5.XPath
 -------
 It is defined as an XML path
-Used to identify an element on web page using HTML 
+Used to identify an element on web page using HTML doc structure.
 Types : 1) Absolute x-path(Complete x-path) -> complete/full address of element in the web page
                                             -> It always have(starts with) single '/'
+           Dis: If any changes made in absolute path then xpath will be failed.                                 
         2) Relative x-path(Partial x-path) -> partial address of element in the web page
                                            -> It always have(starts with) double '//'
-Limitatiion in absolute x-path is, if developed changed any element or removed they that x-path wont work.
+           It will start from the middle of doc path and no need write entire path                                
+Limitation in absolute x-path is, if developed changed any element or removed they that x-path wont work.
                                    so we should always go with relative x-path
 Writing x-path manually:
 -----------------------
@@ -152,12 +154,34 @@ Relative x-path :
                  //*[@type='value' OR @name='value'] - if any one attribute matched
                  //*[@attribute='value' AND @attribute='value'] - if both should be matched
                  //tagname[@attribute1='value'][@attribute2='value'] - multiple attributes
-                 //tagname[contains(@attribute,'value')] - cotains() method
+                 //tagname[contains(@attribute,'value')] - cotains() method  -> It will match wherever it contains
                     ex: //input[contains(@id,email)] - matches gmail,email123, emailbcd
-                 //tagname[starts-with(@attribute,'value')] -strats-with() method
-
+                 //tagname[starts-with(@attribute,'value')] -strats-with() method  -> It should starts with that message.
+                     tagname[starts-with(text(),'message')] - If we want to identify mult elements
+                     tagname[starts-with(text()='message')] - If we want to identify specific element
+                    ex: input[starts-with(text(),'message')]
+                    
 Ex : <input class="input_error form_input" placeholder="Username" type="text" data-test="username" id="user-name" name="user-name" autocorrect="off" autocapitalize="none" value="">
-    //input[@placeholder='Username']
+   - //input[@placeholder='Username']  
+                     
+x-path axes methods:
+-------------------
+x-path methods are used find complex or dynamic elements
+
+-Ancestor -> Select all ancestor elements(parent,Grandparent etc) of current node.
+           //employee/ancestor::* -> Selects all ancestor node of the employee node
+           //ancestor::name  -> select all ancestor of name node in context node
+-Child  -> Select child of the context node
+           //child::*   -> select all child nodes of the context node
+           //child::employee  -> select all child elements of the employee node
+-Parent  -> Select the parent node of the context node
+           //name/parent::*  -> select parent node of the 'name' conext node
+           //email/parent::employee  -> return result node if employee node is parent node of the context node, otherwise no node found.
+-Preceding -> Selects all nodes, before the context node, excluding attributes node or namespace
+           //employee[@id=3]/preceding::employee
+-Following
+-Self
+-Descendant
 
 Selenium IDE :
 ---------------
