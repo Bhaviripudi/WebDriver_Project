@@ -178,10 +178,13 @@ x-path methods are used find complex or dynamic elements
            //name/parent::*  -> select parent node of the 'name' conext node
            //email/parent::employee  -> return result node if employee node is parent node of the context node, otherwise no node found.
 -Preceding -> Selects all nodes, before the context node, excluding attributes node or namespace
-           //employee[@id=3]/preceding::employee
--Following
--Self
--Descendant
+           //tagname[@id='3']/preceding::tagname
+-Following -> Selects all nodes(with child nodes), after the context node, excluding attributes node or namespace
+           //tagname[@id='3']/following::tagname
+-Self      -> selects the current node
+           //name/self::*
+-Descendant -> Selects all descendants(child, grandcildren etc) of the current node
+            //descendant::tagname 
 
 Selenium IDE :
 ---------------
