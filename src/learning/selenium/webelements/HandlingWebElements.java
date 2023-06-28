@@ -8,7 +8,7 @@ public class HandlingWebElements {
 
 	public static void main(String[] args) {
 
-		System.setProperty("webdriver.gecko.driver", "D:\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\kowsh\\Automation downloads\\drivers\\geckodriver.exe");
 		
 		WebDriver driver = new FirefoxDriver();
 		driver.get("https://www.w3.org/WAI/UA/2002/06/thead-test");

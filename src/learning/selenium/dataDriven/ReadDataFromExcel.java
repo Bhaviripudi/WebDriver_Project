@@ -9,7 +9,7 @@ public class ReadDataFromExcel {
 
 	public static void main(String[] args) throws IOException {
 
-		FileInputStream file = new FileInputStream("C:\\Users\\bhsul\\OneDrive\\ReadData.xlsx");
+		FileInputStream file = new FileInputStream("C:\\Users\\kowsh\\ExcelAutomation\\ReadData.xlsx");
 		
 		XSSFWorkbook book = new XSSFWorkbook(file);
 		

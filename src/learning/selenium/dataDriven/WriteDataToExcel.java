@@ -16,7 +16,7 @@ public class WriteDataToExcel {
 		
 		XSSFWorkbook workbook = new XSSFWorkbook();
 		XSSFSheet sheet1 = workbook.createSheet("Sheet1");
-		XSSFSheet sheet2 = workbook.createSheet("Sheet1");
+		XSSFSheet sheet2 = workbook.createSheet("Sheet2");
 		
 		
 		for(int i =0; i<5 ; i++) {

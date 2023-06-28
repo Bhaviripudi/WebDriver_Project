@@ -8,9 +8,11 @@ public class EncodeAndDecode {
 
 		String str = "secret_sauce";
 		byte[] encodedStr = Base64.encodeBase64(str.getBytes());
-		System.out.println("Encoded string "+new String(encodedStr));
+		System.out.println(encodedStr);//bytes format
+		System.out.println("Encoded string "+new String(encodedStr));//string format
 		
 		byte[] decodedStr = Base64.decodeBase64(encodedStr);
+		System.out.println(decodedStr);
 		System.out.println("Decoded String "+new String(decodedStr));
 
 	}

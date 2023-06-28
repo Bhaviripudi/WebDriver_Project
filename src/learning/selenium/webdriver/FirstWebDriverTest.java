@@ -7,8 +7,8 @@ public class FirstWebDriverTest {
 
 	public static void main(String[] args) {
 
-		System.setProperty("webdriver.gecko.driver", "D:\\geckodriver.exe");  //set current path of the driver
-
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\kowsh\\Automation downloads\\drivers\\geckodriver.exe"); //set current path of the driver
+		
 		FirefoxDriver driver = new FirefoxDriver(); // Invoke the browser
 
 		// WebDriver driver = new ChromeDriver(); //Invoke the browser

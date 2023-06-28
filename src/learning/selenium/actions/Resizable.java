@@ -20,6 +20,7 @@ public class Resizable {
 		Actions action = new Actions(driver);
 		action.moveToElement(resize).dragAndDropBy(resize, 100, 100).build().perform();
 		Thread.sleep(3000);
+		driver.close();
 		
 	}
 

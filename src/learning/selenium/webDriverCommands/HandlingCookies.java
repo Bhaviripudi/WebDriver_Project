@@ -10,14 +10,14 @@ public class HandlingCookies {
 
 	public static void main(String[] args) {
 
-		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\kowsh\\Automation downloads\\drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.amazon.in/");
 		
 		Cookie cookieObj = new Cookie("mycookie", "12345"); //create our own cookie in browser
 		driver.manage().addCookie(cookieObj);
 		
-		Set<Cookie> cookies = driver.manage().getCookies(); //capture al cookies
+		Set<Cookie> cookies = driver.manage().getCookies(); //capture all cookies
 		System.out.println("No of cookies " + cookies.size());  // No of cookies
 		
 		for(Cookie cookie : cookies) {

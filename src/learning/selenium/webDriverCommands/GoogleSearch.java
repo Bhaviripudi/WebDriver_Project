@@ -12,7 +12,7 @@ public class GoogleSearch {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		System.setProperty("webdriver.gecko.driver", "D:\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\kowsh\\Automation downloads\\drivers\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		driver.get("https://www.google.com/");
 		driver.findElement(By.name("q")).sendKeys("java");

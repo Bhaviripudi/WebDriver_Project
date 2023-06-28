@@ -22,7 +22,7 @@ public class Barcode {
 
 	public static void main(String[] args) throws IOException, NotFoundException {
 
-		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\kowsh\\Automation downloads\\drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://barcode.tec-it.com/en/Code128?data=ABC-abc-1234");
 		String barcodeUrl = driver.findElement(By.xpath("//*[@id=\"infoTarget\"]/div[1]/img")).getAttribute("src");

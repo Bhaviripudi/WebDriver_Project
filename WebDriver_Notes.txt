@@ -103,14 +103,28 @@ Navigation commands :
    -> navigate().to()
    -> navigate().refresh()
 
-Wait commands :
-   -> Implicitwait
-   -> Explicitwait
-
+Wait commands : Can handle synchronization(sync between script and speed)
+   -> Implicitwait -> is used to tell the web driver to wait for a certain amount of time before it throws a “No Such Element Exception”.
+        Syntax: driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+   -> Explicitwait ->  is used to tell the Web Driver to wait for certain conditions (Expected Conditions) or maximum time exceeded before throwing “ElementNotVisibleException” exception
+                       Need to specify expected conditions.Until it meets condition it will wait.
+        Syntax: WebElement element = new WebDriverWait(driver, 6).until(ExpectedConditions.elementToBeClickable(By.id("first_date_picker")));
+		        element.click();
+		Fluentwait() -> Type of expliciwait.It will wait periodically
+		Syntax: Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)							
+			.withTimeout(30, TimeUnit.SECONDS) 			
+			.pollingEvery(5, TimeUnit.SECONDS) 			
+			.ignoring(NoSuchElementException.class);
+	         WebElement link = wait.until(new Function<WebDriver, WebElement>(){	
+		          public WebElement apply(WebDriver driver ) {
+			         return driver.findElement(By.xpath(""));
+		             }
+	            });                
 Switch commands :
    -> switchTo().frame() - switch between frames/iframes
+                           Frame is a webpage which is embeded into another webpage or html doc embeded into another html doc.
    -> switchTo().alert()
-   -> switchTo().defaultContent()
+   -> switchTo().defaultContent() - switch from iframe to default page.
    -> switchTo().window()
    -> Driver.getWindowHandles()
 
@@ -142,7 +156,7 @@ Types : 1) Absolute x-path(Complete x-path) -> complete/full address of element 
         2) Relative x-path(Partial x-path) -> partial address of element in the web page
                                            -> It always have(starts with) double '//'
            It will start from the middle of doc path and no need write entire path                                
-Limitation in absolute x-path is, if developed changed any element or removed they that x-path wont work.
+Limitation in absolute x-path is, if developer changed any element or removed they that x-path wont work.
                                    so we should always go with relative x-path
 Writing x-path manually:
 -----------------------
@@ -202,21 +216,21 @@ Excel->work books->sheets->rows->cells
 
 FileInputStream -> This class is used for read a file
 FileOutputStream -> This class is used for write a file 
-XSSFWorkbook -> Read workbook
-XSSFSheet -> Read sheet
-XSSFRow -> Read row
-XSSFCell -> Read cell
+XSSFWorkbook -> Read/write workbook
+XSSFSheet -> Read/write sheet
+XSSFRow -> Read/create row
+XSSFCell -> Read/create cell
 
 getStringCellValue() - will get string type data from excel
 getNumericCellValue() - will get number type data from cell
 getBooleanCellValue() - will get boolean type data from cell.
 
-sendKeys(String.valueOf()) - used for sending numeric values
+sendKeys(String.valueOf()) - used for sending numeric values//converts integers into strings
 
 Data Type conversions :
 -----------------------
-String to Integer = Integer.parseInt()
-String to double = Double.parseDouble()
+Converts String to Integer = Integer.parseInt()
+Converts String to double = Double.parseDouble()
 
 Handling Web Table/HTML Table :
 -------------------------------
@@ -243,10 +257,12 @@ WebDriver Handling Browser windows:
 -----------------------------------
 getWindowHandles() -> It will get each window's IDs/Keys
 Set -> It will store mult values
+driver.switchTo().window().getTitle();
 
 Switch between frames/iframes:
 ------------------------------
 driver.switchTo().frame(frame name)
+driver.switchTo().frame(index)
 driver.switchTo().frame(driver.findElement(By.xpath("")));
 
 Switch betweeen alerts:
@@ -361,12 +377,12 @@ Is an interface which provides mechanism to execute java script throgh selenium.
 
 Actions we can perform using JavaScriptExecutor:
 ------------------------------------------------
-->Flashing an element
-->Drawing a boarder around the element
-->Capture title of the page
-->Click on some element
-->Generate alert info
-->Refreshing page
+->Flashing an element  -> js.executeScript("arguments[0].style.backgroundColor='"+color+"'",element)
+->Drawing a boarder around the element  -> js.executeScript("arguments[0].style.border='3px solid red'",element)
+->Capture title of the page -> String title = js.executeScript("return document.titile;").toString();
+->Click on some element -> js.executeScript("arguments[0].click();",element)
+->Generate alert info -> js.executeScript("alert('alert message')")
+->Refreshing page -> js.executeScript("history.go(0)")
 ->Scrolling page
 
 Ashot API:
@@ -379,13 +395,23 @@ ZXing API :
 Selinium has a limitation that cannot automate Bar codes.
 Using ZXing third party automation tool we can automate bar codes and qr codes.
 
-String barcodeUrl/qrcodeUrl = driver.findElement(By.xpath("//*[@id=\"infoTarget\"]/div[1]/img")).getAttribute("src");		
+String barcodeUrl/qrcodeUrl = driver.findElement(By.xpath(" ")).getAttribute("src");		
 URL url = new URL(barcodeUrl);
 BufferedImage bufferedImage = ImageIO.read(url);
 LuminanceSource luminanceSource = new BufferedImageLuminanceSource(bufferedImage);
 BinaryBitmap binaryBitMap = new BinaryBitmap(new HybridBinarizer(luminanceSource));
 Result result = new MultiFormatReader().decode(binaryBitMap);
 System.out.println(result.getText());
+
+Encode and Decode:
+------------------
+String str = "";
+byte[] encodedStr = base64.encodedBase64(str.getBytes); //It will encode it the bytes
+Syso(new String(encodedStr)); change it to the string format.
+
+byte[] decodedStr = base64.decodedBase64(encodedStr);
+Syso(new String(decodedStr));
+
 
 How to handle stale element exception:
 --------------------------------------
