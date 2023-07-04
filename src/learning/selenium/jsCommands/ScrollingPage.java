@@ -15,7 +15,7 @@ public class ScrollingPage {
 		driver.get("https://www.countries-ofthe-world.com/flags-of-the-world.html");
 		
 		    JavascriptExecutor js = (JavascriptExecutor) driver;
-		    //scrollling by the pixel
+		    //scrolling by the pixel
 		    js.executeScript("window.scrollBy(0,1000)", "");
 		    
 		    //scrolling by element

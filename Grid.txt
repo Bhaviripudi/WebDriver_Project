@@ -21,7 +21,7 @@ Steps:
   java -jar selenium-server-4.10.0.jar -role hub
 ->Nodes should register to http://192.168.55.104/grid/register/
   Clients should connect to http://192.168.55.104/wd/hub
-->Check hu is running or not
+->Check hub is running or not
   http://localhost:4444/grid/console
 ->Register node command in remote machine
  java -Dwebdriver.chrome.driver="D:\\chromedriver.exe" -jar selenium-server-4.10.0.jar -role node -hub http://192.168.55.104/grid/register/

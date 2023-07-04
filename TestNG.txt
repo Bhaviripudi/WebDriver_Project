@@ -63,7 +63,7 @@ Structure of testng xml file:
 
 Prioritization:
 ---------------
-By default testng willl follow by the ASCII characters and execute based in that, to overcome that we will use priority
+By default testng willl follow by the ASCII characters and execute based on that, to overcome that we will use priority
 @Test(priority=1)
 
 How to skip the test case from suite:
@@ -97,7 +97,7 @@ TestNG Listeners:
 -----------------
 If we want to do any additional opeartions apart from pass or fail then will use listener class
 
-When ever methods are passed/failed from test classes automatically the methods in listener class willl be executed
+When ever methods are passed/failed from test classes automatically the methods in listener class will be executed
 
 onTestStart()
 onTestSuccess()
@@ -106,7 +106,7 @@ onTestSkipped()
 
 TestNG Extent-Resports:
 -----------------------
-Normal testng reports will also give reports but entent reports will give the graphical representation.
+Normal testng reports will also give reports but extent reports will give the graphical representation.
 
 Go to maven repository and type 
 extent reports - download jar files and to ur project
@@ -129,7 +129,7 @@ log4j:
 By the logs we can easily identify the root cause of bug
 
 Download apache log4j jar file and add it if it did not come with apache jar files
-log4j.xml or log4j.properties fille
+log4j.xml or log4j.properties file
 
 
 Record Test execution:
