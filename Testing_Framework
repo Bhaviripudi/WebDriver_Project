@@ -1,0 +1,61 @@
+Hybrid Framework:
+-----------------
+Framework -> Organizing all our test files like automation test scripts and test cases, reports etc in proper structure.
+Why should we use framework:
+----------------------------
+Two reasons:
+1.Maintainability
+2.Re-Usability
+
+Username and password:
+-----------------------
+https://demo.guru99.com/v4/
+User ID :	mngr509450
+Password :	ajYbUre
+
+Framework is devided into phases:
+1.Implementation:
+-----------------
+-> Create Maven project
+-> Update pom.xml
+-> Create page objects
+-> Create basic test cases
+-> Add logs to test cases
+-> Read comon values from properties file
+-> Run test case on desired browser
+-> Add extent report
+-> Create data driven test cases
+-> Adding new test case
+
+2.Execution:
+------------
+-> Run test cases with maven pom.xml
+-> Run test cases through maven CLI(Command line interface)
+-> Run test cases using run.bat
+-> Run test cases using jenkins(using bat file)
+
+3.Maintenance:
+---------------
+-> Creating repository in git hub
+-> Commit the project code in local repo
+-> Push the code to remote repo from local.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
