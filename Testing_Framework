@@ -40,6 +40,9 @@ Framework is devided into phases:
 -> Commit the project code in local repo
 -> Push the code to remote repo from local.
 
+System.getProperty("user.dir") -> It will only work on java
+./ -> will work on both java and properties file
+
 
 
 
