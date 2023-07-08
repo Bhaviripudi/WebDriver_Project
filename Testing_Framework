@@ -48,6 +48,10 @@ Data Provider:
 Data provider method will provide the data to the test method.
 It will take data from the excel and return data into two dimensionary and finally send it to the test method
 
+If you want to run only failed test cases:
+-------------------------------------------
+test-output -> faild.xml file -> run it
+
 
 
 
