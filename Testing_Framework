@@ -43,7 +43,10 @@ Framework is devided into phases:
 System.getProperty("user.dir") -> It will only work on java
 ./ -> will work on both java and properties file
 
-
+Data Provider:
+--------------
+Data provider method will provide the data to the test method.
+It will take data from the excel and return data into two dimensionary and finally send it to the test method
 
 
 
