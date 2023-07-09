@@ -45,6 +45,18 @@ Framework is devided into phases:
    open ur prjct folder and create run.bat file
    copy the above 2 commands and dbl clk on bat file , it will automatically run project
 -> Run test cases using jenkins(using bat file)
+   - Execute project using free style project(ru.bat) :
+     -New item -> Item name(project name) -> Free style project -> Build -> give 2 commands
+         cd C:\Users\reddi\OneDrive\Desktop\Sulochana\Automation_workspace\Hybrid_Framework
+         mvn clean install
+         save
+     -Run project - clk on project and clk on build now
+   - Execute maven project :
+     -Have to add all maven plugins
+     -Manage jenkins -> global tools configuration -> jdk -> jdk installation -> JAVA_HOME path
+     -New item -> Item name(project name) -> Maven project -> Build -> complete path of pom.xml
+         -> goals and options :clean install
+         save
 
 3.Maintenance:
 ---------------
@@ -68,6 +80,8 @@ Maven:
 -----
 Maven is a build tool, but there are some features we can use for our testing and development
 Devops teams will use maven
+
+Jenkins -> Is an integration tool
 
 
 
