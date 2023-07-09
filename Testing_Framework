@@ -30,8 +30,20 @@ Framework is devided into phases:
 2.Execution:
 ------------
 -> Run test cases with maven pom.xml
+   Usage of pom.xml:
+  -----------------
+  Dependencies -> Will download all jar files requied for our project
+  Through pom we can run all our test cases
+  plugins to run maven project
+  maven-compiler-plugin
+  maven-surefire-plugin
 -> Run test cases through maven CLI(Command line interface)
+   open cmd check maven is installed on your windows or not
+   command : cd C:\Users\reddi\OneDrive\Desktop\Sulochana\Automation_workspace\Hybrid_Framework -> project location(pom)
+   command: mvn clean install
 -> Run test cases using run.bat
+   open ur prjct folder and create run.bat file
+   copy the above 2 commands and dbl clk on bat file , it will automatically run project
 -> Run test cases using jenkins(using bat file)
 
 3.Maintenance:
@@ -51,6 +63,11 @@ It will take data from the excel and return data into two dimensionary and final
 If you want to run only failed test cases:
 -------------------------------------------
 test-output -> faild.xml file -> run it
+
+Maven:
+-----
+Maven is a build tool, but there are some features we can use for our testing and development
+Devops teams will use maven
 
 
 
