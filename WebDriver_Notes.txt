@@ -120,7 +120,14 @@ Wait commands : Can handle synchronization(sync between script and speed)
 		          public WebElement apply(WebDriver driver ) {
 			         return driver.findElement(By.xpath(""));
 		             }
-	            });                
+	            }); 
+     ExpectedConditions : elementToBeClickable(By locator or WebElement)
+                          visibilityOfElementLocated(locator or element)
+                          attributeContains(WebElement element, String attribute, String value)
+                          alertIsPresent()
+                          titleContains(String title)
+                          titleIs(String title)
+                          textToBePresentInElementLocated(By, String)
 Switch commands :
    -> switchTo().frame() - switch between frames/iframes
                            Frame is a webpage which is embeded into another webpage or html doc embeded into another html doc.
