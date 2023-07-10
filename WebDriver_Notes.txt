@@ -104,11 +104,12 @@ Navigation commands :
    -> navigate().refresh()
 
 Wait commands : Can handle synchronization(sync between script and speed)
-   -> Implicitwait -> is used to tell the web driver to wait for a certain amount of time before it throws a “No Such Element Exception”.
+   -> Implicitwait -> is used to tell the web driver to wait for a certain amount of time before it throws a “No Such Element Exception”. Applied for all elements
         Syntax: driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
    -> Explicitwait ->  is used to tell the Web Driver to wait for certain conditions (Expected Conditions) or maximum time exceeded before throwing “ElementNotVisibleException” exception
                        Need to specify expected conditions.Until it meets condition it will wait.
-        Syntax: WebElement element = new WebDriverWait(driver, 6).until(ExpectedConditions.elementToBeClickable(By.id("first_date_picker")));
+        Syntax: WebDriverWait wait;
+                WebElement element = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.id("first_date_picker")));
 		        element.click();
 		Fluentwait() -> Type of expliciwait.It will wait periodically
 		Syntax: Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)							
