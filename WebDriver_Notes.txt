@@ -121,6 +121,8 @@ Wait commands : Can handle synchronization(sync between script and speed)
 			         return driver.findElement(By.xpath(""));
 		             }
 	            }); 
+     Diff btw Implicit and Explicit : For implict,the timeout value remains valid throughout the webdriver's instance and for all the elements whereas 
+                                      Explicit is applied for only specified element
      ExpectedConditions : elementToBeClickable(By locator or WebElement)
                           visibilityOfElementLocated(locator or element)
                           attributeContains(WebElement element, String attribute, String value)
