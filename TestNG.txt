@@ -125,6 +125,7 @@ why to use -> It will be useful to maintain all the elements in one class for co
            -> If something has changed no need to search and change the element, that time we can directly go for pom.
            -> Helps to create a framework for maintaining selenium scripts.
            -> The test scripts are maintained in diff files and the methods of page object files are called from the test script files
+           -> It makes code reusable and maintainable
 
 log4j:
 -------
