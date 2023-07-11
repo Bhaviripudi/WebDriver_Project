@@ -289,6 +289,7 @@ Actions class:
 -> It contains the Actions and the Action class that are needed when executing these events.
 
 clickAndHold() - clicks(without releasing)
+                 act.clickAndHold(source).moveToElement(target).release().build().peerform();
 contextClick() - Performs a context(right clk) at the current mouse location
 doubleClick() - performs double clk
 dragAndDrop(source,target) - clk and hold at source and release at target ->not a method
