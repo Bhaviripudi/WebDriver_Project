@@ -15,6 +15,12 @@ Pre-requisites:
 windows(Hub) ---------> windows(chrome)
 windows(Hub) ---------> linux(firefox)
 
+Adv:
+----
+It allows testcases run parallel therby saving test execution time
+Multi browser testing is possible using grid by running the test on machines having diff browsers
+It allows multi platform testing by configuring nodes having diff OSs.
+
 Steps:
 ------
 ->In cmd where jar located execute this command as a hub
