@@ -75,6 +75,7 @@ Prioritization:
 ---------------
 By default testng willl follow by the ASCII characters and execute based on that, to overcome that we will use priority
 @Test(priority=1)
+If two test methods are there, one with priority 1 and another with no priority in that case no priority method will be executed first. Becoz testng will take it as bydefault priority as 0.
 
 How to skip the test case from suite:
 -------------------------------------
