@@ -11,7 +11,8 @@ Automation Testing
 Selenium suite:
 ----------------
 ->Selenium IDE : plug-in for firefox browser, record and playback tool
-->Rc(Remote Control) : Is a server will interact with browser and execute automating test cases(indirect).  
+->Rc(Remote Control) : Is a server will interact with browser and execute automating test cases(indirect). It supports all browsers. Relies on javaScript for 
+                       automation
 ->Webdriver : Is an API which will automate test cases
 ->Selenium Grid : Can execute test cases remotely.
 
