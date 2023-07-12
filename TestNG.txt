@@ -3,8 +3,17 @@ TestNG(Testing framework for next generation):
 ->Advanced framework of junit, is a framework that can be integrated with selenium or any other automation tools to provide mult capabilities like 
   assertions,reporting , parallel execution etc
 Is a framework specifically designed for java programmers
-This can be used for unit testing, integration, functional and end to end testing
-Can be used for parallel testing
+Adv:
+---
+- Provides different assertions to help checking expected and actual results
+- We can provide dependency of one test over other
+- We can assign priority to methods
+- It allows grouping of test methods into test groups
+- It allows data driven testing using @DataProviders
+- It has inherent support for reporting
+- It has support for parameterizing test cases using @Parameters annotation
+- This can be used for unit testing, integration, functional and end to end testing
+- Can be used for parallel testing
 
 TestNG Assertions:
 -------------------
