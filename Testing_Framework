@@ -1,6 +1,8 @@
 Hybrid Framework:
 -----------------
 Framework -> Organizing all our test files like automation test scripts and test cases, reports etc in proper structure.
+                               (or)
+             Set of rules which we can follow in a systematic way to achieve desired results.
 Why should we use framework:
 ----------------------------
 Two reasons:
