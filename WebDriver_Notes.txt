@@ -344,6 +344,7 @@ driver.manage().addCookie(arg0) -> Create or add cookie
 driver.manage().deleteCookie(arg0) -> Delete specific cookie
 driver.manage().deleteCookieNamed(arg0) -> Delete cookie by name
 driver.manage().deleteAllCookies() -> Delete all cookies
+driver.manage().deleteAllVisibleCookies() -> Disable all cookies
 
 Scrolling web pages :
 ---------------------
