@@ -106,6 +106,8 @@ Same aplies for methods as well....
 TestNG Listeners:
 -----------------
 If we want to do any additional opeartions apart from pass or fail then will use listener class
+listener class used for generate extent reports
+One of the most widely used listener in testNG is iTestListener interface and TestListenerAdapter class
 
 When ever methods are passed/failed from test classes automatically the methods in listener class will be executed
 
