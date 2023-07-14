@@ -83,6 +83,41 @@ Logical operators :
 -------------------
 OR , AND  and NOT
 
+SQL Commands :
+--------------
+Create database -> create database db_name;
+Rename database -> rename database old_name to new_name; or alter database old_name modify name = new_name;
+Drop database -> drop database db_name;
+Select all tables from database -> select * from db_name;
+Select db -> use db_name
+
+Create table -> create table table_nm(col_nm datatype(width),..., primary key())
+Delete table records -> truncate table tbl_nm;
+Delete entire table -> drop table table_name;
+Rename table -> rename old_tbl_nm to new_tbl_nm;
+Copy table -> select * into req_tbl from source_tbl;
+
+Add coln in the table -> alter table tbl_nm add col_nm dt(width);
+Modify field datatype -> alter table tbl_nm modify col_nm new_dt();
+Delete coln -> alter table tbl_nm drop column col_nm;
+Rename coln - alter table tbl_nm rename column old_col to new_col;
+
+Sql constraints :
+-----------------
+Not null, 
+Unique,
+Primary key - It specifies a column or a set of columns that uniquely identify a row, it does not allow null values
+Foreign Key - It is a column(s) that references a column(s) of a table
+Check - It specifies a condition that must be satisfied by all the rows in a table
+
+Insert commands :
+-----------------
+Inserting
+
+
+
+
+
 
 
 
