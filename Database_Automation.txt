@@ -19,3 +19,103 @@ Steps to connect db and execute queries through java:
 2.Create a statement
 3.Execute statement
 4.close connection
+
+*************************
+-----* Sql for testers *----
+Database :
+----------
+A database is organized and systematic collection of data that is stored and accesses in/from a system.
+
+DBMS:
+-----
+Is a software system that is used to maintain and access the database. It allows the user to create, delete, update and access the data in the database.
+We use a databse, when there is a huge amount of data, the security of data is important or when multiple users have to access to the data.
+
+RDBMS:
+-----
+Is an advanced version of dbms. RDMS is a database that allows user to store related data in the form of mult tables, which are linked by establishing a relationship between different tables.
+
+Tables:
+-------
+Rdbms uses tables to store the data in the form of rows and columns.
+
+Rows:
+-----
+Records in the table.
+
+Columns:
+--------
+Attributes/Fields in the table.
+
+SQL:
+----
+Structured Query Language, used to request information from database. Using sql, user can perform actions like insertion, creation, deletion , updation etc.
+
+SQL data types:
+---------------
+varchar2 - String datatypes in java
+char - char type in java
+date - date
+timestamp - If we want timestamp
+number - int
+Long - double
+clob - char upto 4gigabytes
+Blob - binary upto 4gigabytes
+raw - raw binary data
+bfile - binary data that is stored in external files upto 4gb
+rowid - 64 base number system for the unique address of a particular row in the table
+
+Operators :
+-----------
+"+"  - add vales
+"-"  - subtracts values
+"%"  - modulus operations
+"*"  - multiplies
+"/"   - divide values
+
+Comparison operators :
+---------------------
+= , != , < , > , <=, >=, 
+!> -- Determine if the right operand is not more than left operand
+!< -- Determine if the left operand is not more than right operand
+
+Logical operators :
+-------------------
+OR , AND  and NOT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
