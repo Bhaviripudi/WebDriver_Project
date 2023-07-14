@@ -112,7 +112,17 @@ Check - It specifies a condition that must be satisfied by all the rows in a tab
 
 Insert commands :
 -----------------
-Inserting
+Inserting values into table -> insert into table_nm values(20,..);
+Inserting value into specific coln -> insert into tbl_nm(col_nm) values(20);
+
+Select commands:
+----------------
+Fetching a table -> Select * from table_nm;
+Fetching unique values from table -> Select distinct coln_nm from tbl_nm;
+Select count -> select count(col_nm) from tbl_nm where condition(col_nm >100); 
+Select top -> select top no_records from tbl_nm where condition;
+Select as -> select coln_nm new_col_nm from tbl_nm;
+
 
 
 
