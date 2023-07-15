@@ -122,6 +122,23 @@ Fetching unique values from table -> Select distinct coln_nm from tbl_nm;
 Select count -> select count(col_nm) from tbl_nm where condition(col_nm >100); 
 Select top -> select top no_records from tbl_nm where condition;
 Select as -> select coln_nm new_col_nm from tbl_nm;
+Select in -> select col_nm from tbl_nm where coln_nm in(val1, val2) , Eg: select dep_nm from dept where dpt_id in(101,102);
+select date -> select getdate();
+select sum -> select sum col_nm from tbl_nm where condition(col>100);
+select null -> select col_nm from tbl_nm where condition is null;
+
+Clauses:
+---------
+Where -> Used to select only those records which satisfies specific condition
+And -> Returns records if both the conditions are true
+OR -> Returns records if any of the record is true
+GroupBy -> groups rows that have the same values into summary rows according to cond, used functions like max, in, avg, sum, count
+           select count(col_nm1) from tbl_nm where cond groupBy col_nm2;
+OrderBy -> sort our selection either in asc or desc
+           select col_nm1 from tbl_nm orderBy col_nm2 desc;
+Having -> is used when we want to specify the condition for the selection of records
+          select count(col_nm1), col_nm2 from tbl_nm grouby col_nm2 having count(col_nm3)>3; 
+
 
 
 
