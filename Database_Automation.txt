@@ -138,7 +138,33 @@ OrderBy -> sort our selection either in asc or desc
            select col_nm1 from tbl_nm orderBy col_nm2 desc;
 Having -> is used when we want to specify the condition for the selection of records
           select count(col_nm1), col_nm2 from tbl_nm grouby col_nm2 having count(col_nm3)>3; 
+Update -> update tbl_nm set col_nm1 ="", col_nm2 ="" where col_nm3 =?;
+Delete -> delete from tbl_nm where col_nm =?;
+Union -> Used to combine result set of 2 or mone select statements
+         select col_nm from tbl_nm1 union col_nm from tbl_nm2;
+Intersect -> Return those values which common to both the datasets. This operator will only work if both the datasets being intersected have similar data types.
+             select col_nm from tbl_nm1 intersect col_nm from tbl_nm2;
+Except -> This operator selects those rows which are present in the SELECT statement and not in the second SELECT statement.
+          select col_nm from tbl_nm1 except col_nm from tbl_nm2;
 
+Joim commands:   Combines 2 or more tables based on related col btw them
+--------------
+Inner join -> Is used to combine the common records shared by the two datasets.
+              select tbl_nm1.col_nm1, tbl_nm2.col_nm2 from tbl_nm1 inner join tbl_nm2 on tbl_nm1.col_nm1 = tbl_nm2.col_nm1;
+Left join -> returns all records from the left table (table1), and the matching records (if any) from the right table (table2).
+             SELECT Customers.CustomerName, Orders.OrderID FROM Customers LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+Right join -> returns all records from the right table (table2), and the matching records (if any) from the left table (table1).
+              SELECT Orders.OrderID, Employees.LastName, Employees.FirstName FROM Orders RIGHT JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+Full outer join -> used to combine all the records from both the tables when there are some common records between the tables.
+                  SELECT dep_name FROM department  FULL OUTER JOIN employee ON department.dep_name = employee.emp_dep;
+Self join ->  is used to combine a table with itself by creating a temporary table of itself and joining it with itself.
+              SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City FROM Customers A, Customers B WHERE A.CustomerID <> B.CustomerID
+              AND A.City = B.City
+Cross join -> returns all records from both tables (table1 and table2).
+              SELECT Customers.CustomerName, Orders.OrderID FROM Customers CROSS JOIN Orders WHERE Customers.CustomerID=Orders.CustomerID;
+Sub query -> is a query nested within another query. These subqueries are placed in SQL clauses like WHERE, HAVING, WITH, FROM etc. The subqueries are executed 
+             first and the output obtained after executing this query is used to execute the outer or the main query.
+             SELECT * FROM Customers WHERE Country IN (SELECT Country FROM Suppliers);
 
 
 
