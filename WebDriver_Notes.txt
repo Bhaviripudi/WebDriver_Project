@@ -193,8 +193,8 @@ x-path axes methods:
 x-path methods are used find complex or dynamic elements
 
 -Ancestor -> Select all ancestor elements(parent,Grandparent etc) of current node.
-           //employee/ancestor::* -> Selects all ancestor node of the employee node
-           //ancestor::name  -> select all ancestor of name node in context node
+           //employee(tagname)/ancestor::* -> Selects all ancestor node of the employee node
+           //ancestor::name(tagname)  -> select all ancestor of name node in context node
 -Child  -> Select child of the context node
            //child::*   -> select all child nodes of the context node
            //child::employee  -> select all child elements of the employee node
