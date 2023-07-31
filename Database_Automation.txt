@@ -121,7 +121,7 @@ Fetching a table -> Select * from table_nm;
 Fetching unique values from table -> Select distinct coln_nm from tbl_nm;
 Select count -> select count(col_nm) from tbl_nm where condition(col_nm >100); 
 Select top -> select top no_records from tbl_nm where condition;
-Select as -> select coln_nm new_col_nm from tbl_nm;
+Select as -> select coln_nm as new_col_nm from tbl_nm;
 Select in -> select col_nm from tbl_nm where coln_nm in(val1, val2) , Eg: select dep_nm from dept where dpt_id in(101,102);
 select date -> select getdate();
 select sum -> select sum col_nm from tbl_nm where condition(col>100);
